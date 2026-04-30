@@ -3,11 +3,14 @@ async function sendMessage() {
     const chatBox = document.getElementById('chat-box');
     const question = inputField.value.trim();
 
+    //don't do anything if the user entered nothing
     if (!question) return;
 
     // Display the users message
     addMessage(question, 'user-message');
-    inputField.value = ''; // Clear input
+    // Clear input
+    inputField.value = '';
+
 
     try {
         // send question to flask
