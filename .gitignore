@@ -1,0 +1,24 @@
+# ── Place this file at the ROOT of NEIU335AI/ ─────────────
+# It covers all subfolders including every assignment.
+
+# ── Environment & Secrets ─────────────────────────────────
+.env
+
+# ── Python ────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ── Virtual Environments ──────────────────────────────────
+venv/
+env/
+.venv/
+.env/
+
+# ── IDE / OS ──────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
