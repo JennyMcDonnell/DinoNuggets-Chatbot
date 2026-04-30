@@ -4,6 +4,8 @@ import numpy as np
 import torch
 from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 import os
 from dotenv import load_dotenv
 
@@ -45,7 +47,8 @@ tokenizer = AutoTokenizer.from_pretrained(GENERATOR_MODEL)
 # with default settings
 model = AutoModelForSeq2SeqLM.from_pretrained(GENERATOR_MODEL)
 
-
+app = Flask(__name__)
+CORS(app)
 
 def generate_answer(prompt: str, max_new_tokens: int = 80) -> str:
     """Generate an answer from a seq2seq model (deterministic)."""
@@ -65,20 +68,13 @@ def generate_answer(prompt: str, max_new_tokens: int = 80) -> str:
 # 4) Retrieval + Chat loop
 print("DinoNuggets is ready! Type your question or type 'exit' to quit.\n")
 
-while True:
-    try:
-        question = input("You: ").strip()
-    except (EOFError, KeyboardInterrupt):
-        print("\nDinoNuggets will miss you! Bye!")
-        break
-
-    if question.lower() in {"exit", "quit"}:
-        print("DinoNuggets will miss you! Bye!")
-        break
+@app.route('/chat', methods=['POST'])
+def chat():
+    data = request.json
+    question = data.get("question", "").strip()
 
     if not question:
-        print("\nHmmm, It seems a cat has your tongue! Please type a question when you're ready.\n")
-        continue
+        return jsonify({"error": "No question provided"}), 400
 
     # Embed question and normalize
     q_vec = embedder.encode([question], convert_to_numpy=True)
@@ -92,8 +88,7 @@ while True:
     top_score = float(scores[top_indices[0]])
 
     if top_score < CONFIDENCE_THRESHOLD:
-        print("\nDinoNuggets says:\nI don’t know based on my knowledge base.\n")
-        continue
+        return jsonify({"response": "I don’t know based on my knowledge base."})
 
     retrieved = [(knowledge_base[i], float(scores[i])) for i in top_indices]
 
@@ -116,4 +111,8 @@ while True:
     )
 
     response = generate_answer(prompt, max_new_tokens=100)
-    print("\nDinoNuggets says:\n", response, "\n")
+    return jsonify({"response": response})
+
+if __name__ == '__main__':
+    # Run the server
+    app.run(host='0.0.0.0', port=5000, debug=False)
