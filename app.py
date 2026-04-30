@@ -4,6 +4,9 @@ import numpy as np
 import torch
 from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+import os
+from dotenv import load_dotenv
+
 
 #tweakable variables
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
@@ -12,11 +15,16 @@ TOP_K = 3
 CONFIDENCE_THRESHOLD = 0.45
 DEBUG_MODE = False 
 
-# 1) Load Knowledge base from file
+# load an HF_TOKEN from .env
+# if none found, setup will take a couple extra seconds
+load_dotenv()
+HF_TOKEN = os.getenv("HF_TOKEN")
+
+# Load Knowledge base from file
 with open('knowledge_base.txt', 'r') as file:
     knowledge_base = [line.strip() for line in file]
 
-# 2) Embedding model + helpers
+# Embedding model
 embedder = SentenceTransformer(EMBEDDING_MODEL)
 
 #keeps direction of the vector, but sets the length to 1
@@ -29,8 +37,6 @@ def normalize(vectors: np.ndarray) -> np.ndarray:
 kb_vectors = embedder.encode(knowledge_base, convert_to_numpy=True)
 kb_vectors = normalize(kb_vectors)
 
-
-# 3) model setup
 
 # AutoTokenizer.fromPretrained() creates a tokenizer with default settings from the model
 tokenizer = AutoTokenizer.from_pretrained(GENERATOR_MODEL)
@@ -63,7 +69,7 @@ while True:
     try:
         question = input("You: ").strip()
     except (EOFError, KeyboardInterrupt):
-        print("\n👋 Chatbot says goodbye!")
+        print("\nDinoNuggets will miss you! Bye!")
         break
 
     if question.lower() in {"exit", "quit"}:
