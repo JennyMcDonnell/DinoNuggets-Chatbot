@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Dino Nugs AI</title>
+        <link rel="stylesheet" href="styles.css">
+
     </head>
     <body>
         <header>
@@ -9,7 +11,15 @@
         </header>
 
         <main>
-            
+            <div id="chat-box">
+                <div id="response">Rawr! I'm DinoNuggets. Ask me anything about dinosaurs!</div>
+            </div>
+
+            <div class="input-area">
+                <label for="user-input"><input type="text" id="user-input" placeholder="Type your dino question..." /></label>
+                <button onclick="sendMessage()">Send</button>
+            </div>
         </main>
+    <script src="scripts.js" defer></script>
     </body>
 </html>
