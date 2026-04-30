@@ -64,9 +64,7 @@ def generate_answer(prompt: str, max_new_tokens: int = 80) -> str:
 
     return tokenizer.decode(output_ids[0], skip_special_tokens=True).strip()
 
-
-# 4) Retrieval + Chat loop
-print("DinoNuggets is ready! Type your question or type 'exit' to quit.\n")
+print("Server is ready to accept connections")
 
 @app.route('/chat', methods=['POST'])
 def chat():
