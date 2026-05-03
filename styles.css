@@ -18,7 +18,7 @@ body {
 
 .chat-container{
     width: 400px;
-    height: 600px;
+    height: min(600px, 95vh);
     background:rgba(225, 225, 225, 0.2);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(225, 225, 225, 0.3);
@@ -39,7 +39,7 @@ header{
 
 .chat-box{
     flex: 1;
-    overflow-y: bottom;
+    overflow-y: scroll;
     padding: 15px;
     background: transparent;
 }
