@@ -6,20 +6,21 @@
 
     </head>
     <body>
-        <header>
+        <div class="chat-container">
+            <header>
+                <h1>Dino Chatbot 🦕</h1>
+            </header>
+            <div id="chat-box" class="chat-box">
+                <div class="message bot-message">RAWR! I'm Anzu, your 65-million-year-old AI dinosaur chatbot! Ask me anything about dinosaurs!</div>
+                <div class="message user-message">User Hi</div>
+                <div class="input-area">
+                    <input type="text" id="user-input" placeholder="Type your message...">
+                    <button id="send-btn">Send</button>
+                </div>
 
-        </header>
-
-        <main>
-            <div id="chat-box">
-                <div id="response">Rawr! I'm DinoNuggets. Ask me anything about dinosaurs!</div>
             </div>
+        </div>
 
-            <div class="input-area">
-                <label for="user-input"><input type="text" id="user-input" placeholder="Type your dino question..." /></label>
-                <button onclick="sendMessage()">Send</button>
-            </div>
-        </main>
     <script src="scripts.js" defer></script>
     </body>
 </html>

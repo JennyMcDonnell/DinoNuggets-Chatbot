@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+body {
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-container{
+    width: 400px;
+    height: 600px;
+    background:rgba(225, 225, 225, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(225, 225, 225, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header{
+    background: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.chat-box{
+    flex: 1;
+    overflow-y: bottom;
+    padding: 15px;
+    background: transparent;
+}
+
+.message{
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    line-height: 1.4;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.user-message{
+    background: #ad8ccf;
+    color: #fff;
+    margin-left: auto;
+    align-self: flex-end;
+}
+
+.bot-message{
+    background: rgba(225, 225, 225, 0.9);
+    color: #333;
+    align-self: flex-start;
+}
+
+.input-area{
+    display: flex; 
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#user-input{
+    flex: 1;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background: rgba(225, 225, 225, 0.9);
+    outline: none;
+    border-radius: 8px;
+}
+
+#send-btn{
+    background: #ad8ccf;
+    color: #fff;
+    border: none; 
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 8px;
+    cursor: pointer; 
+    transition: background 0.3s;
+}
+
+#send-btn:hover{
+    background: #8565a4;
+}
