@@ -12,5 +12,5 @@ Dino Nuggets is a chatbot using a knowledge base document using facts about dino
 <br>Iris Antunez<br>
 
 ## Support & Contact:
-jmcdonnell00@gmail.com
-iris.a1995@gmail.com
+<br>jmcdonnell00@gmail.com<br>
+<br>iris.a1995@gmail.com<br>
