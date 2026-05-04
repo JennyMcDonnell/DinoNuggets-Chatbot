@@ -1,3 +1,4 @@
+//sends a JSON object to the server when the user presses send
 async function sendMessage() {
     const inputField = document.getElementById('user-input');
     const chatBox = document.getElementById('chat-box');
@@ -40,13 +41,14 @@ function addMessage(text, className) {
     const msgDiv = document.createElement('div');
     msgDiv.className = `message ${className}`;
     msgDiv.innerText = text;
+    //adds the new message to the end of chat-box
     chatBox.appendChild(msgDiv);
 
     // Auto-scroll to the bottom
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-// Allow "Enter" key to send the message
+// Allow Enter key to send the message
 document.getElementById('user-input').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
         sendMessage();
