@@ -6,10 +6,10 @@ Dino Nuggets is a chatbot using a knowledge base document using facts about dino
 * you could also install them one by one if you prefer
 
 ## Credits:
-Jennifer McDonnell
-Adriana Zamudio
-Jabari Johnson
-Iris Antunez
+<br>Jennifer McDonnell<br>
+<br>Adriana Zamudio<br>
+<br>Jabari Johnson<br>
+<br>Iris Antunez<br>
 
 ## Support & Contact:
 jmcdonnell00@gmail.com
