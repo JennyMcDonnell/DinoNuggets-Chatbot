@@ -15,7 +15,7 @@ Tyrannosaurus Rex  lived about 66–68 million years ago during the Cretaceous P
 Tyrannosaurus Rex skulls and teeth reveal that it was a meat eater, and judging from its size, it could have eaten whatever animal it could catch or scavenge.
 The word ‘Tyrannosaur’ refers to all members of the Tyrannosauroidea superfamily. More than 22 species of Tyrannosaurs are known to exist, and more are discovered every year.
 The Troodon was considered the Einstein of dinosaurs, with a relatively large brain for its body. Fossil evidence suggests great senses. Such as excellent eyesight, smell, and keen hearing.
-The Trodon’s brain may have been the size of a golf ball, but it was the smartest dinosaur of its time. Compared to its size which was usually half the size of a human and only 1-2 meters long. A golf ball size brain was large considering their body mass.
+The Trodon’s brain may have been the size of a golf ball, but it was the smartest dinosaur of its time. Compared to its size which was usually half the size of a human and only 1-2 meters long.
 The Troodon may have also been called the Stenonychosaurus, and was very similar to our birds. This dinosaur was also considered an omnivore.
 Abydosaurus mcintoshi is a sauropod dinosaur from the Early Cretaceous period (approximately 105 million years ago).
 Abydosaurus mcintoshi was first discovered in the Cedar Mountain Formation, Utah, USA.
@@ -36,4 +36,6 @@ Deinonychus is the best known of North America's dromaeosaurids, or raptors.
 In Utah, deinonychus is mostly known from teeth collected in the Ruby Ranch Member of the Cedar Mountain Formation.
 Deinonychid tracks (track name Dromaeosaurpus) have been found in the lower Ruby Ranch at the Mill Canyon Dinosaur Tracksite north of Moab, Utah. These tracks are significant as they demonstrate that these dinosaurs walked on only two toes to keep their sickle-claw sharp.
 Deinonychus are from the middle cretaceous period.
+Patagotitan mayorum was the largest dinosaur based on complete fossil remains, measuring roughly 37 meters long and weighing up to 70 tons.
+Microraptor was the smallest non-avian dinosaur. measuring around 11–24 inches and weighing just a few pounds.
 Your favorite dinosaur is the triceratops.
